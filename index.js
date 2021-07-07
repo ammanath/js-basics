@@ -31,3 +31,17 @@ console.log(`The values are : ${name1} / ${age} /
  selectedColors[2] = 1;
  
  console.log(selectedColors.length);
+
+ //functions
+ function greet(name, lastName){
+     console.log('Hello ' + name + ' ' +lastName);
+ }
+
+function square(number){
+    return number * number;
+}
+
+let number = square(2);
+console.log('Square is: ' + number);
+
+greet('Robertooo' , 'Owens');
