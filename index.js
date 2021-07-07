@@ -25,3 +25,9 @@ console.log(`The values are : ${name1} / ${age} /
  ${isApproved} / ${space} / ${last}`);
 
  console.log(person);
+
+ //Arrays
+ let selectedColors = ['red', 'blue'];
+ selectedColors[2] = 1;
+ 
+ console.log(selectedColors.length);
