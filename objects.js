@@ -32,7 +32,17 @@ function Circle(radius){
     }
 }
 
+const Circle1 = new Function('radius',
+`this.radius = radius;
+this.draw= function(){
+    console.log('draw from constructor');
+}`);
+
+
 const circle2 = new Circle(2);
 circle2.draw();
 
-let x= {};
+for(let key in circle2){
+    if(typeof circle[key] !== 'function')
+        console.log(key, circle[key]);
+}
