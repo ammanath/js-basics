@@ -22,7 +22,7 @@ function createCircle(radius){
 }
 
 const circle1 = createCircle(2);
-circle1.draw();
+circle1.draw(); 
 
 //constructor function
 function Circle(radius){
