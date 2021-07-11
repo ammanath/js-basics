@@ -24,3 +24,16 @@ function isPrime(n){
     return true;
 }
 
+function min(a,b){
+    return a<b?a:b;
+}
+
+function pow(x,n){
+    let result=x;
+    for(let i=1;i<n;i++){
+        result *= x;
+    }
+    return result;
+
+}
+
