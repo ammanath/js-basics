@@ -2,6 +2,7 @@
 function StopWatch(){
     let duration = 0;
     let intervalId;
+    
     this.start = function(){
         intervalId = setInterval(setDuration,1000);
         console.log('Started...');
@@ -16,9 +17,11 @@ function StopWatch(){
         console.log('Reset : ' + duration);
     }
 
-    this.printInterval = function(){
-        console.log('Duration : ' +  duration);
-    }
+    Object.defineProperty(this,'duration',{
+        get:function(){
+            return duration;
+        }
+    });
 
     let setDuration = function(){
         duration = duration + 1;
