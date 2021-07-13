@@ -8,7 +8,7 @@ class Car{
         this.color = color;
     }
 
-    carStats(){
+    getCarStats(){
         return `This car has ${this.doors} doors, 
             a ${this.engine} engine and is of ${this.color} color`;
     }
@@ -20,7 +20,23 @@ class Car{
     }
 }
 
+class SUV extends Car{
+    constructor(doors, engine, color, brand){
+        super(doors, engine, color);
+        this.brand= brand;
+        this.wheels = 4;
+        this.ac=true;
+    }
+
+    getMyBrand(){
+        return console.log(`This SUV is a ${this.brand}`);
+    }
+
+}
+
 const cx5 = new Car(4, 'V6', 'Orange');
-console.log(cx5);
-console.log(cx5.carStats());
+const suv = new SUV(4, 'V8', 'Blue','Mahindra');
+console.log(suv);
+console.log(suv.getMyBrand());
+console.log(suv.getCarStats());
 
